@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap");
+
 * {
   box-sizing: border-box;
 }
@@ -8,6 +10,7 @@ html {
   padding: 0;
   background-color: black;
   color: wheat;
+  font-family: "Press Start 2P", cursive;
 }
 
 .watch-face {
@@ -18,7 +21,25 @@ html {
   align-items: center;
 }
 
-#showTime{
-    font-family: 'Press Start 2P', cursive;
-    font-size: 7vw;
+#showTime {
+  font-size: 7vw;
+  padding-bottom: 20px;
+}
+
+button {
+  border: none;
+  padding: 15px 32px;
+  text-align: center;
+  border-radius: 10px;
+  transition-duration: 0.5s;
+  background-color: #f0e68c;
+  font-family: "Black Ops One", cursive;
+  width: 15rem;
+}
+
+button:hover {
+  color: #fff;
+  background-color: #996515;
+  transform: scale(1.5);
+  cursor: pointer;
 }
