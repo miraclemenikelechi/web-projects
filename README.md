@@ -1,2 +1,2 @@
 # web-projects
- code excercises
+ coding excercises
