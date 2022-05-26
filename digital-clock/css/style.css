@@ -1,0 +1,24 @@
+* {
+  box-sizing: border-box;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  color: wheat;
+}
+
+.watch-face {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#showTime{
+    font-family: 'Press Start 2P', cursive;
+    font-size: 7vw;
+}
