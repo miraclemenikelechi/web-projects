@@ -7,11 +7,13 @@ let edited = false;
 let editId;
 
 // user wants to set a todo
-taskInput.addEventListener("keyup", entry => {
+taskInput.addEventListener("keyup", (entry) => {
     let userTask = taskInput.value.trim();
     if (entry.key === "Enter" && userTask) {
-        if (!edited) { // if task is not being edited (not false ie true[edited])
-            if (!ToDo) { // if todo is not empty
+        if (!edited) {
+            // if task is not being edited (not false ie true[edited])
+            if (!ToDo) {
+                // if todo is not empty
                 ToDo = []; // set localStorage (if list is cleared) to an empty array
             }
             let taskInfo = {
@@ -53,17 +55,21 @@ const viewTasks = (filters) => {
             }
         });
     }
-    taskBox.innerHTML = li || `<p style="text-transform: uppercase;">you do not have any task here</p>`;
+    taskBox.innerHTML =
+        li ||
+        `<p style="text-transform: uppercase;">you do not have any task here</p>`;
 };
 viewTasks("all");
 
 // user done with task
 const finishTask = (checkedTask) => {
     let taskName = checkedTask.parentElement.lastElementChild; // getting the <p> element from front end
-    if (checkedTask.checked) { // user checks task
+    if (checkedTask.checked) {
+        // user checks task
         taskName.classList.add("marked");
         ToDo[checkedTask.id].status = "complete";
-    } else { // user unchecks task
+    } else {
+        // user unchecks task
         taskName.classList.remove("marked");
         ToDo[checkedTask.id].status = "pending";
     }
@@ -74,7 +80,7 @@ const finishTask = (checkedTask) => {
 const taskMenu = (selectedTask) => {
     let options = selectedTask.parentElement.lastElementChild; // getting the <i> element from <div> parent element
     options.classList.add("show");
-    document.addEventListener("click", elsewhere => {
+    document.addEventListener("click", (elsewhere) => {
         if (elsewhere.target.tagName != "I" || elsewhere.target != selectedTask) {
             options.classList.remove("show");
         }
@@ -96,7 +102,7 @@ const deleteTask = (selectedTask) => {
 };
 
 // filter unfinished and completed tasks
-filter.forEach(button => {
+filter.forEach((button) => {
     button.addEventListener("click", () => {
         document.querySelector("span.active").classList.remove("active");
         button.classList.add("active");
