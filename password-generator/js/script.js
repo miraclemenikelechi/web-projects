@@ -106,4 +106,3 @@ copyEl.addEventListener("click", () => {
 });
 
 generateEl.addEventListener("click", generateCode);
-console.log(copyEl);
