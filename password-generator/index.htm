@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>password generator</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v2.1.5/css/unicons.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="password">
+                <p id="password">password appears here...</p>
+                <button id="copy">copy<span><i class="uil uil-clipboard-notes"></i></span></button>
+            </div>
+        </div>
+        <div class="body">
+            <div class="form">
+                <label for="lenght">Secret Word Lenght</label>
+                <input id="lenght" type="text" onkeypress="return isNumberKey(event)" oninput="maxLenght(this)"
+                    placeholder="min: 6, max: 20" min="8" max="30" maxlength="2">
+            </div>
+            <div class="form">
+                <label for="upper">Include Uppercase Letters</label>
+                <input id="upper" type="checkbox">
+            </div>
+            <div class="form">
+                <label for="lower">Include Lowercase Letters</label>
+                <input id="lower" type="checkbox">
+            </div>
+            <div class="form">
+                <label for="number">Include Numbers</label>
+                <input id="number" type="checkbox">
+            </div>
+            <div class="form">
+                <label for="symbol">Include Symbols</label>
+                <input id="symbol" type="checkbox">
+            </div>
+            <div class="form">
+                <label for="strenght">Password Strenght</label>
+                <p id="strenght"></p>
+            </div>
+            <button class="generate" id="generate">Generate Password
+                <span><i class="uil uil-lock-access"></i></span></button>
+        </div>
+    </div>
+</body>
+<script src="./js/script.js"></script>
+
+</html>

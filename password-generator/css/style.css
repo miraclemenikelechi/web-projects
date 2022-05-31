@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300;400;500;600;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Source Code Pro", monospace;
+  /* background-color: #ff3cac;
+  background-image: linear-gradient(
+    225deg,
+    #ff3cac 0%,
+    #784ba0 50%,
+    #2b86c5 100%
+  ); */
+  background-image: linear-gradient(
+    109.6deg,
+    rgba(103, 43, 196, 1) 11.2%,
+    rgba(184, 75, 221, 1) 91.1%
+  );
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  width: 400px;
+  background-color: #3f2b96;
+  border-radius: 5px;
+  max-height: 650px;
+  /* box-shadow: 0 4px 10px rgba(215, 72, 14, 0.5); */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.header {
+  padding: 1rem;
+}
+
+.password {
+  background-color: #8875de;
+  min-height: 50px;
+  max-height: 300px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 1rem;
+  font-size: 29;
+  word-break: break-all;
+  overflow: hidden;
+}
+
+.password button {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #5449e8;
+  padding: 0 5px;
+  border: none;
+  color: #fff;
+  font-size: 15px;
+  transition: opacity 0.3s ease;
+  opacity: 0;
+  cursor: pointer;
+  font-weight: bold;
+  font-family: inherit;
+}
+
+.password:hover button {
+  opacity: 0.9;
+}
+
+.body {
+  padding: 0 1rem 1rem;
+}
+
+.form {
+  display: flex;
+  justify-content: space-between;
+  margin: 0.75rem 0;
+}
+
+.generate {
+  display: block;
+  background-color: #100b5a;
+  color: #ff3cac;
+  font-weight: bold;
+  font-size: 25px;
+  padding: 1rem;
+  border: none;
+  width: 100%;
+  margin-top: 1rem;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  text-align: center;
+  transition: box-shadow 0.2s ease, color 0.5s ease;
+  cursor: pointer;
+}
+
+.generate:hover {
+  box-shadow: 0px 4px 5px 0px #c052b1bf;
+  color: #85db93;
+}
+
+.form p {
+  text-transform: uppercase;
+}
